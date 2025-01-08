@@ -1,0 +1,68 @@
+﻿@page "/todolist"
+@rendermode InteractiveServer
+
+<h3>To Do</h3>
+<br />
+
+<button type="button" class="btn btn-outline-info" @onclick="AddTask">Add Task</button>
+<br />
+<br />
+
+@foreach (Tasks todo in tasks)
+{
+    <div @key="todo">     
+        <input type="checkbox" checked="@todo.isCompleted" @onchange="() => ToggleCompleted(todo)" />&nbsp;
+        <input type="text"
+               value="@todo.Content"
+               class="col-md-6"
+               style="border: @(todo.isCompleted ? "1px solid black" : "none"); background: @(todo.isCompleted ? "#E4E2E3" : "none"); outline: none; text-decoration: @(todo.isCompleted ? "line-through" : "none")"
+               readonly="@todo.isCompleted"
+        @onchange="(e) => HandleContentChange(e, todo)" /> &nbsp;
+        @if(todo.isCompleted)
+        {
+            <label style="background: #E4E2E3; text-align: center" class="col-md-5">Completed at @($"{DateTime.Now.ToShortDateString()}")</label>
+        }
+        <br />
+        <br />
+    </div>
+}
+
+@code {
+    private List<Tasks> tasks = TaskRepo.GetTasks();
+
+    private bool _isCompleted { get; set; }
+
+
+    private void ToggleCompleted(Tasks task)
+    {
+        task.isCompleted = !task.isCompleted;
+        ListTasks(tasks);  // Ensure the list is refreshed when toggling completion
+    }
+
+    private void ListTasks(List<Tasks> tasksToSort)
+    {
+        // Filter tasks that are completed
+        List<Tasks> completedTasks = tasksToSort.Where(t => t.isCompleted).ToList();
+
+        // Remove completed tasks from the original list
+        tasks = tasksToSort.Where(t => !t.isCompleted).ToList();
+
+        // Add the completed tasks to the end of the tasks list
+        tasks.AddRange(completedTasks);
+    }
+
+    private void AddTask()
+    {
+        // Assuming this adds a new task to the TaskRepo and returns the updated task list
+        TaskRepo.AddTask();
+
+        tasks = TaskRepo.GetTasks();
+
+        ListTasks(tasks);
+    }
+
+    private void HandleContentChange(ChangeEventArgs e, Tasks task)
+    {
+        task.Content = e.Value?.ToString();
+    }
+}

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\blazor-course-todolist-app\\todolist_project\\components\\pages\\todo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|solutionrelative:components\\pages\\todo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\blazor-course-todolist-app\\todolist_project\\components\\taskrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|solutionrelative:components\\taskrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\blazor-course-todolist-app\\todolist_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\blazor-course-todolist-app\\todolist_project\\components\\classes\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEA6DE59-81E4-4561-99AC-65518A899CF9}|ToDoList_Project.csproj|solutionrelative:components\\classes\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\TaskRepo.cs",
+              "RelativeDocumentMoniker": "Components\\TaskRepo.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\TaskRepo.cs",
+              "RelativeToolTip": "Components\\TaskRepo.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T17:40:30.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\Classes\\Tasks.cs",
+              "RelativeDocumentMoniker": "Components\\Classes\\Tasks.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\Classes\\Tasks.cs",
+              "RelativeToolTip": "Components\\Classes\\Tasks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T13:56:30.942Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ToDo.razor",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\Pages\\ToDo.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\ToDo.razor",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Components\\Pages\\ToDo.razor",
+              "RelativeToolTip": "Components\\Pages\\ToDo.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T13:53:36.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Blazor-Course-ToDoList-App\\ToDoList_Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
