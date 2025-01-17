@@ -1,0 +1,49 @@
+﻿<button type="button" class="btn btn-outline-info" @onclick="HandleAddTask">Add Task</button>
+<br />
+<br />
+
+@if(tasks != null)
+{
+    @foreach (Tasks todo in tasks)
+    {
+        <ToDoItemComponent 
+            todoTask="todo"
+        addItem="HandleAddTask"
+        toggleCompleted="HandleToggleCompleted"
+        listItems="HandleListTasks"></ToDoItemComponent>
+    }
+}
+
+@code {
+
+    [Parameter]
+    public List<Tasks>? tasks { get; set; }
+
+    private void HandleToggleCompleted(Tasks task)
+    {
+        if (tasks != null) { HandleListTasks(tasks); }
+    }
+
+    private void HandleListTasks(List<Tasks> tasksToSort)
+    {
+        // Filter tasks that are completed
+        List<Tasks> completedTasks = tasksToSort.Where(t => t.isCompleted).ToList();
+
+        // Remove completed tasks from the original list
+        tasks = tasksToSort.Where(t => !t.isCompleted).ToList();
+
+        // Add the completed tasks to the end of the tasks list
+        tasks.AddRange(completedTasks);
+    }
+
+    private void HandleAddTask()
+    {
+        // Assuming this adds a new task to the TaskRepo and returns the updated task list
+        TaskRepo.AddTask();
+
+        tasks = TaskRepo.GetTasks();
+
+        HandleListTasks(tasks);
+    }
+
+}

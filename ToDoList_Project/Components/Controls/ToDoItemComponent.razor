@@ -1,0 +1,53 @@
+﻿@if (todoTask != null)
+{
+    <div @key="todoTask">
+        <input type="checkbox" checked="@todoTask.isCompleted" @onchange="() => ToggleCompleted(todoTask)" />&nbsp;
+        <input type="text"
+        @bind-value="todoTask.Content"
+        class="col-md-6"
+        style="border: @(todoTask.isCompleted ? "1px solid black" : "none");
+                  background: @(todoTask.isCompleted ? "#E4E2E3" : "none");
+                  outline: none;
+                  text-decoration: @(todoTask.isCompleted ? "line-through" : "none")"
+        readonly="@todoTask.isCompleted" /> &nbsp;
+        @if (todoTask.isCompleted)
+        {
+            <label style="background: #E4E2E3; text-align: center" class="col-md-5">Completed at @($"{DateTime.Now.ToShortDateString()}")</label>
+        }
+        <br />
+        <br />
+    </div>
+}
+
+@code {
+
+    [Parameter]
+    public Tasks? todoTask { get; set; }
+
+    [Parameter]
+    public EventCallback<Tasks> toggleCompleted { get; set; }
+
+    [Parameter]
+    public EventCallback<List<Tasks>> listItems { get; set; }
+
+    [Parameter]
+    public EventCallback addItem { get; set; }
+
+    private void ToggleCompleted(Tasks task)
+    {
+        task.isCompleted = !task.isCompleted;
+
+        toggleCompleted.InvokeAsync(task);
+    }
+
+    private void ListTasks(List<Tasks> tasksToSort)
+    {
+        listItems.InvokeAsync(tasksToSort);
+    }
+
+    private void AddTask()
+    {
+        addItem.InvokeAsync();
+    }
+
+}
